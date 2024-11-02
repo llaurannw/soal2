@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bermain dengan Warna</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        
+        #kotakWarna {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+        
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #tombolMerah {
+            background-color: #ff4444;
+            color: white;
+        }
+        
+        #tombolBiru {
+            background-color: #00cccc;
+            color: white;
+        }
+        
+        #tombolKuning {
+            background-color: #ffeb3b;
+        }
+        
+        #sembunyikanKotak, #tampilkanKotak {
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Bermain dengan Warna</h1>
+
+    <div>
+        <button id="tombolMerah">Merah</button>
+        <button id="tombolBiru">Biru</button>
+        <button id="tombolKuning">Kuning</button>
+    </div>
+
+    <div id="kotakWarna"></div>
+
+    <div>
+        <button id="sembunyikanKotak">Sembunyikan Kotak</button>
+        <button id="tampilkanKotak">Tampilkan Kotak</button>
+    </div>
+
+    <p>Klik tombol warna untuk mengubah warna kotak.</p>
+    <p>Gunakan tombol Sembunyikan dan Tampilkan untuk menyembunyikan dan menampilkan kotak.</p>
+
+    <script>
+        $(document).ready(function() {
+            $("#tombolMerah").click(function() {
+                $("#kotakWarna").css("background-color", "#ff4444");
+            });
+            
+            $("#tombolBiru").click(function() {
+                $("#kotakWarna").css("background-color", "#00cccc");
+            });
+            
+            $("#tombolKuning").click(function() {
+                $("#kotakWarna").css("background-color", "#ffeb3b");
+            });
+            
+            $("#sembunyikanKotak").click(function() {
+                $("#kotakWarna").hide();
+            });
+            
+            $("#tampilkanKotak").click(function() {
+                $("#kotakWarna").show();
+            });
+        });
+    </script>
+</body>
+</html>
